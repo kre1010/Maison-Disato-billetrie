@@ -1,0 +1,1319 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <!-- =====================================================================
+       NORMES SEO & METADONNÉES MODERNES (HTML5, OpenGraph, Schema.org)
+       ===================================================================== -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Disato Pass — Pop-Up Store Maison Disato | 19 Juin 2027 • Maison Mère, Marseille</title>
+  <meta name="description" content="Réservez votre Disato Pass gratuit pour le Pop-Up Store exclusif de la marque indépendante Maison Disato, le samedi 19 juin 2027 de 13h00 à 19h00 à Maison Mère, Marseille.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A2E46">
+  <link rel="canonical" href="https://www.maisondisato.fr/disato-pass-marseille">
+
+  <!-- Open Graph / Réseaux Sociaux -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:site_name" content="Maison Disato">
+  <meta property="og:title" content="Disato Pass — Pop-Up Store Maison Disato à Maison Mère, Marseille">
+  <meta property="og:description" content="Samedi 19 juin 2027 (13h00 - 19h00) à Maison Mère, Marseille. Réservez votre pass gratuit pour découvrir la collection été inspirée de la Sicile et de la Méditerranée.">
+
+  <!-- Données Structurées SEO (JSON-LD Schema.org SaleEvent) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SaleEvent",
+    "name": "POP-UP STORE — MAISON DISATO (Collection Été : Escapade Méditerranéenne & Sicile)",
+    "description": "Pop-Up Store exclusif de la marque de vêtement indépendante Maison Disato à Maison Mère, Marseille. Présentation de la capsule été inspirée de la mer Méditerranée et de la Sicile.",
+    "startDate": "2027-06-19T13:00:00+02:00",
+    "endDate": "2027-06-19T19:00:00+02:00",
+    "eventStatus": "https://schema.org/EventScheduled",
+    "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+    "organizer": {
+      "@type": "Brand",
+      "name": "Maison Disato"
+    },
+    "location": {
+      "@type": "Place",
+      "name": "Maison Mère",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Maison Mère",
+        "addressLocality": "Marseille",
+        "postalCode": "13001",
+        "addressCountry": "FR"
+      }
+    },
+    "offers": {
+      "@type": "Offer",
+      "name": "Disato Pass — Entrée Gratuite",
+      "price": "0.00",
+      "priceCurrency": "EUR",
+      "availability": "https://schema.org/InStock",
+      "validFrom": "2026-11-18T00:00:00+01:00"
+    }
+  }
+  </script>
+
+  <!-- Google Fonts : Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+          },
+          colors: {
+            med: {
+              deep: '#0A2E46',      // Bleu azur profond
+              sea: '#145374',       // Bleu méditerranéen
+              azure: '#1E6F9F',     // Bleu mer lumineux
+              limestone: '#FAF7F2', // Blanc chaux / pierre calcaire
+              sand: '#F2ECE1',      // Sable chaud
+              lemon: '#F4C430',     // Jaune citron de Sicile
+              terracotta: '#D96B43',// Terre cuite
+              gold: '#C89D54'       // Doré céramique
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- =====================================================================
+       STYLES PERSONNALISÉS : FOND PLEIN ÉCRAN MER MÉDITERRANÉE, CARTE 3D & ACCESSIBILITÉ
+       ===================================================================== -->
+  <style>
+    :root {
+      --glare-x: 50%;
+      --glare-y: 50%;
+    }
+
+    body {
+      background-color: #0A2E46;
+      color: #0A2E46;
+      overflow-x: hidden;
+      margin: 0;
+    }
+
+    /* Arrière-plan photographique plein écran : Mer Méditerranée vue de Marseille (Calanques et azur)
+       avec un léger voile semi-transparent pour un contraste WCAG AA optimal */
+    .mediterranean-fullscreen-bg {
+      position: fixed;
+      inset: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      background-image: 
+        linear-gradient(
+          180deg,
+          rgba(10, 46, 70, 0.45) 0%,
+          rgba(10, 46, 70, 0.65) 60%,
+          rgba(7, 30, 46, 0.85) 100%
+        ),
+        url('https://images.unsplash.com/photo-1533105079780-92b9be482077?auto=format&fit=crop&w=2200&q=85');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    /* Frise céramique sicilienne décorative */
+    .sicilian-border-tile {
+      height: 10px;
+      background-image: repeating-linear-gradient(
+        90deg,
+        #0A2E46 0px,
+        #0A2E46 16px,
+        #F4C430 16px,
+        #F4C430 32px,
+        #145374 32px,
+        #145374 48px,
+        #D96B43 48px,
+        #D96B43 64px
+      );
+    }
+
+    /* Focus visible haute accessibilité (WCAG 2.1 AA/AAA) */
+    *:focus-visible {
+      outline: 3px solid #F4C430;
+      outline-offset: 3px;
+      border-radius: 0.5rem;
+    }
+
+    /* Lien d'évitement clavier (Skip Link) */
+    .skip-link {
+      position: absolute;
+      top: -120px;
+      left: 1rem;
+      z-index: 100;
+      background: #0A2E46;
+      color: #FAF7F2;
+      font-weight: 700;
+      padding: 0.75rem 1.25rem;
+      border-radius: 0.5rem;
+      border: 2px solid #F4C430;
+      transition: top 0.2s ease;
+    }
+    .skip-link:focus {
+      top: 1rem;
+    }
+
+    /* =====================================================================
+       ARCHITECTURE DE LA CARTE 3D (TILT, PARALLAXE & FLIP 180°)
+       ===================================================================== -->
+    .card-scene {
+      perspective: 1200px;
+    }
+
+    .card-3d-wrapper {
+      position: relative;
+      width: 100%;
+      transform-style: preserve-3d;
+      transition: transform 0.18s cubic-bezier(0.23, 1, 0.32, 1);
+      will-change: transform;
+    }
+
+    .card-flip-inner {
+      position: relative;
+      width: 100%;
+      min-height: 560px;
+      transform-style: preserve-3d;
+      transition: transform 0.75s cubic-bezier(0.4, 0.2, 0.2, 1);
+    }
+
+    .card-scene.is-flipped .card-flip-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-face {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      border-radius: 1.5rem;
+      overflow: hidden;
+      border: 2px solid rgba(244, 196, 48, 0.4);
+      background: linear-gradient(155deg, rgba(10, 46, 70, 0.96) 0%, rgba(16, 61, 92, 0.98) 100%);
+      box-shadow: 
+        0 28px 60px -15px rgba(0, 0, 0, 0.6),
+        0 0 0 1px rgba(255, 255, 255, 0.15) inset;
+    }
+
+    .card-face-back {
+      transform: rotateY(180deg);
+      background: linear-gradient(160deg, #FAF7F2 0%, #F2ECE1 100%);
+      color: #0A2E46;
+      border: 2px solid #0A2E46;
+    }
+
+    /* Reflet solaire & doré holographique suivant le curseur */
+    .solar-glare {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      border-radius: 1.5rem;
+      background: radial-gradient(
+        circle 320px at var(--glare-x, 50%) var(--glare-y, 50%),
+        rgba(244, 196, 48, 0.3),
+        rgba(200, 157, 84, 0.15) 35%,
+        rgba(255, 255, 255, 0.08) 55%,
+        transparent 80%
+      );
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      mix-blend-mode: screen;
+      z-index: 20;
+    }
+
+    .card-scene:hover .solar-glare {
+      opacity: 1;
+    }
+
+    .card-scene:hover .card-face-front {
+      border-color: #F4C430;
+      box-shadow: 
+        0 34px 70px -15px rgba(0, 0, 0, 0.7),
+        0 0 35px rgba(244, 196, 48, 0.3);
+    }
+
+    /* Élévation des éléments sur l'axe Z (Parallaxe 3D) */
+    .pop-z-sm {
+      transform: translateZ(20px);
+    }
+    .pop-z-md {
+      transform: translateZ(38px);
+    }
+    .pop-z-lg {
+      transform: translateZ(54px);
+    }
+
+    /* Perforation de billet physique */
+    .ticket-perforation {
+      position: relative;
+      border-top: 2px dashed rgba(10, 46, 70, 0.25);
+    }
+    .ticket-perforation::before,
+    .ticket-perforation::after {
+      content: '';
+      position: absolute;
+      top: -12px;
+      width: 22px;
+      height: 22px;
+      border-radius: 9999px;
+      background-color: #FAF7F2;
+      border: 1px solid rgba(10, 46, 70, 0.15);
+    }
+    .ticket-perforation::before {
+      left: -29px;
+    }
+    .ticket-perforation::after {
+      right: -29px;
+    }
+
+    /* Impression propre du E-Billet */
+    @media print {
+      body * {
+        visibility: hidden;
+      }
+      #ticket-modal, #ticket-modal * {
+        visibility: visible;
+      }
+      #ticket-modal {
+        position: absolute;
+        inset: 0;
+        background: #ffffff !important;
+        padding: 0 !important;
+      }
+      .no-print {
+        display: none !important;
+      }
+    }
+
+    /* =====================================================================
+       RESPECT DE LA NORME D'ACCESSIBILITÉ : prefers-reduced-motion
+       ===================================================================== */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .card-3d-wrapper {
+        transform: none !important;
+      }
+      .solar-glare {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col antialiased selection:bg-med-lemon selection:text-med-deep">
+
+  <!-- Arrière-plan mer Méditerranée vue de Marseille en plein écran -->
+  <div class="mediterranean-fullscreen-bg" aria-hidden="true"></div>
+
+  <!-- Lien d'évitement clavier -->
+  <a href="#main-content" class="skip-link">Aller directement à la réservation du Disato Pass</a>
+
+  <!-- Annonces dynamiques pour lecteurs d'écran (ARIA Live) -->
+  <div id="a11y-announcer" class="sr-only" aria-live="polite" aria-atomic="true"></div>
+
+  <!-- Frise supérieure céramique sicilienne -->
+  <div class="sicilian-border-tile w-full" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       EN-TÊTE SÉMANTIQUE & NAVIGATION
+       ===================================================================== -->
+  <header class="sticky top-0 z-40 bg-med-deep/90 backdrop-blur-md border-b border-white/15">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
+      
+      <!-- Identité Maison Disato -->
+      <a href="#" class="flex items-center gap-3.5 group" aria-label="Maison Disato — Accueil Billetterie Disato Pass">
+        <div class="w-11 h-11 rounded-xl bg-med-limestone border border-med-gold flex items-center justify-center shadow-md group-hover:scale-105 transition-transform">
+          <svg class="w-6 h-6 text-med-deep" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true">
+            <circle cx="12" cy="12" r="4" stroke-width="1.8" fill="currentColor" fill-opacity="0.15"/>
+            <path stroke-linecap="round" stroke-width="1.8" d="M12 2v3m0 14v3M2 12h3m14 0h3m-2.93-7.07l-2.12 2.12M7.05 16.95l-2.12 2.12m0-14.14l2.12 2.12m9.9 9.9l2.12 2.12"/>
+          </svg>
+        </div>
+        <div>
+          <span class="font-serif font-bold text-2xl tracking-wide text-white block leading-none">
+            MAISON DISATO
+          </span>
+          <span class="text-[11px] uppercase tracking-[0.2em] text-med-lemon font-semibold mt-1 block">
+            Disato Pass • Marseille
+          </span>
+        </div>
+      </a>
+
+      <!-- Navigation Desktop -->
+      <nav aria-label="Navigation principale" class="hidden md:flex items-center gap-7">
+        <a href="#disato-pass-section" class="text-sm font-semibold text-med-limestone hover:text-med-lemon transition-colors">Pop-Up Store</a>
+        <a href="#engagements" class="text-sm font-semibold text-med-limestone hover:text-med-lemon transition-colors">Maison Mère & Infos</a>
+        <button type="button" id="btn-open-tickets-modal" class="text-sm font-semibold text-med-limestone hover:text-med-lemon transition-colors flex items-center gap-1.5">
+          <span>Mes Disato Pass</span>
+          <span id="saved-tickets-badge" class="hidden px-2 py-0.5 text-xs font-bold rounded-full bg-med-lemon text-med-deep border border-med-deep/20">0</span>
+        </button>
+      </nav>
+
+      <!-- Contrôles Accessibilité 3D & Bouton Réservation -->
+      <div class="flex items-center gap-2.5 sm:gap-3">
+        <button 
+          type="button" 
+          id="toggle-3d-btn"
+          aria-pressed="true"
+          title="Activer ou désactiver l'inclinaison 3D de la carte"
+          class="hidden sm:inline-flex items-center gap-2 px-3 py-2 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-med-limestone border border-white/20 shadow-sm transition-colors">
+          <span class="w-2 h-2 rounded-full bg-emerald-400" id="tilt-status-dot" aria-hidden="true"></span>
+          <span>Effet 3D : <strong id="tilt-status-text">Actif</strong></span>
+        </button>
+
+        <button 
+          type="button" 
+          id="open-cart-btn"
+          aria-label="Ouvrir votre sélection de Disato Pass"
+          aria-haspopup="dialog"
+          aria-expanded="false"
+          class="relative inline-flex items-center gap-2 px-4 py-2.5 rounded-xl font-bold text-sm bg-med-lemon hover:bg-yellow-300 text-med-deep shadow-lg transition-all active:scale-95">
+          <svg class="w-4 h-4 text-med-deep" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 5v2m0 4v2m0 4v2M5 5a2 2 0 00-2 2v3a2 2 0 110 4v3a2 2 0 002 2h14a2 2 0 002-2v-3a2 2 0 110-4V7a2 2 0 00-2-2H5z" />
+          </svg>
+          <span class="hidden sm:inline">Réservation</span>
+          <span id="cart-count-badge" class="inline-flex items-center justify-center min-w-[1.4rem] h-5 px-1.5 text-xs font-extrabold rounded-full bg-med-deep text-med-lemon">
+            0
+          </span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- =====================================================================
+       CONTENU PRINCIPAL : ÉVÉNEMENT UNIQUE 13H - 19H & CARTE 3D INTERACTIVE
+       ===================================================================== -->
+  <main id="main-content" class="flex-1">
+    
+    <!-- EN-TÊTE ÉDITORIAL DE L'ÉVÉNEMENT -->
+    <section aria-labelledby="event-main-heading" class="pt-12 pb-8 sm:pt-16 sm:pb-10 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto text-center">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-med-deep/80 backdrop-blur-md border border-med-gold/50 text-med-lemon text-xs font-bold uppercase tracking-[0.18em] mb-5 shadow-lg">
+        <span class="w-2 h-2 rounded-full bg-med-lemon animate-pulse" aria-hidden="true"></span>
+        <span>Pop-Up Store Exclusif • Samedi 19 Juin 2027 (13h00 – 19h00)</span>
+      </div>
+
+      <h1 id="event-main-heading" class="font-serif text-4xl sm:text-6xl font-bold text-white tracking-tight leading-[1.1] mb-4 drop-shadow-md">
+        POP-UP STORE — <span class="italic text-med-lemon">MAISON DISATO</span>
+      </h1>
+
+      <p class="font-serif italic text-xl sm:text-2xl text-med-sand font-bold mb-5 drop-shadow">
+        « Collection Été — Escapade Méditerranéenne & Sicile »
+      </p>
+
+      <p class="text-sm sm:text-base text-med-limestone font-medium max-w-2xl mx-auto leading-relaxed bg-med-deep/75 backdrop-blur-md px-6 py-4 rounded-2xl border border-white/15 shadow-xl">
+        La marque indépendante Maison Disato vous invite à découvrir sa capsule estivale à <strong>Maison Mère, Marseille (13001)</strong>. Réservez gratuitement votre <strong>Disato Pass</strong> dès à présent.
+      </p>
+    </section>
+
+    <!-- SECTION CARTE INTERACTIVE 3D -->
+    <section id="disato-pass-section" aria-labelledby="pass-card-heading" class="py-6 pb-20 px-4 sm:px-6 lg:px-8 max-w-3xl mx-auto">
+      <h2 id="pass-card-heading" class="sr-only">Carte interactive 3D Disato Pass unique</h2>
+
+      <div class="card-scene w-full" id="disato-card-scene">
+        <div class="card-3d-wrapper" id="disato-card-wrapper">
+          <div class="card-flip-inner">
+
+            <!-- ================= FACE AVANT (RECTO) ================= -->
+            <div class="card-face card-face-front flex flex-col justify-between text-med-limestone">
+              <!-- Reflet solaire doré holographique -->
+              <div class="solar-glare" id="disato-solar-glare" aria-hidden="true"></div>
+
+              <!-- Illustration Mer Méditerranée, Citrons de Sicile & Vagues -->
+              <div class="relative h-56 sm:h-64 overflow-hidden border-b border-med-gold/30">
+                <svg viewBox="0 0 600 240" class="w-full h-full object-cover" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="sky-med" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#0A2E46"/>
+                      <stop offset="50%" stop-color="#145374"/>
+                      <stop offset="100%" stop-color="#1E6F9F"/>
+                    </linearGradient>
+                    <radialGradient id="sicilian-sun" cx="75%" cy="32%" r="38%">
+                      <stop offset="0%" stop-color="#F4C430" stop-opacity="0.95"/>
+                      <stop offset="45%" stop-color="#D96B43" stop-opacity="0.45"/>
+                      <stop offset="100%" stop-color="#0A2E46" stop-opacity="0"/>
+                    </radialGradient>
+                  </defs>
+
+                  <rect width="600" height="240" fill="url(#sky-med)"/>
+                  <circle cx="445" cy="76" r="95" fill="url(#sicilian-sun)"/>
+                  <circle cx="445" cy="76" r="34" fill="#F4C430" opacity="0.92"/>
+
+                  <!-- Rosace céramique majolique -->
+                  <g transform="translate(135, 95)" stroke="#F4C430" stroke-width="1" fill="none" opacity="0.32">
+                    <circle r="68"/>
+                    <circle r="52" stroke-dasharray="6 4"/>
+                    <polygon points="0,-65 18,-18 65,0 18,18 0,65 -18,18 -65,0 -18,-18"/>
+                  </g>
+
+                  <!-- Citrons de Sicile -->
+                  <g transform="translate(415, 118)">
+                    <ellipse cx="0" cy="0" rx="22" ry="15" transform="rotate(-22)" fill="#F4C430" stroke="#FAF7F2" stroke-width="1.5"/>
+                    <path d="M-12,-14 Q-32,-28 -44,-14 Q-28,-6 -12,-14 Z" fill="#2E7D5B" stroke="#FAF7F2" stroke-width="1"/>
+                  </g>
+
+                  <!-- Vagues Méditerranée -->
+                  <path d="M0,175 Q75,152 150,175 T300,175 T450,175 T600,175 L600,240 L0,240 Z" fill="#0D3B59" opacity="0.85"/>
+                  <path d="M0,192 Q90,170 180,192 T360,192 T540,192 T600,192 L600,240 L0,240 Z" fill="#082336"/>
+                  <path d="M0,175 Q75,152 150,175 T300,175 T450,175 T600,175" fill="none" stroke="#F4C430" stroke-width="1.5" opacity="0.65"/>
+                </svg>
+
+                <!-- Badges en relief Z -->
+                <div class="absolute top-4 left-4 right-4 flex items-center justify-between gap-2 pop-z-sm">
+                  <span class="px-3.5 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest bg-med-deep/90 backdrop-blur-md text-med-lemon border border-med-lemon/40 shadow">
+                    Disato Pass • Entrée Gratuite
+                  </span>
+                  <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-med-terracotta text-white shadow">
+                    Maison Mère, Marseille
+                  </span>
+                </div>
+
+                <!-- Bouton « Infos » pour retourner la carte à 180° -->
+                <button 
+                  type="button" 
+                  id="flip-to-back-btn"
+                  aria-label="Retourner la carte à 180 degrés pour voir le programme complet"
+                  class="absolute bottom-4 right-4 px-3.5 py-2 rounded-xl text-xs font-bold bg-med-limestone text-med-deep hover:bg-med-lemon transition-colors shadow-lg flex items-center gap-1.5 pop-z-md">
+                  <svg class="w-4 h-4 text-med-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span>Infos & Programme (13h - 19h)</span>
+                </button>
+              </div>
+
+              <!-- Corps de la carte Recto -->
+              <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                <div class="pop-z-sm">
+                  <div class="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-semibold text-med-lemon mb-2">
+                    <time datetime="2027-06-19T13:00">Samedi 19 Juin 2027 • 13h00 – 19h00</time>
+                    <span aria-hidden="true">•</span>
+                    <span>Maison Mère, Marseille (13001)</span>
+                  </div>
+
+                  <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight leading-tight">
+                    POP-UP STORE — MAISON DISATO
+                  </h3>
+                  <p class="text-xs sm:text-sm text-med-sand mt-1">
+                    Accès exclusif à la collection été, essayages et rencontre avec l'équipe créative.
+                  </p>
+                </div>
+
+                <!-- Bouton de réservation du Disato Pass unique -->
+                <div class="pt-4 border-t border-white/15 flex items-center justify-between gap-4 pop-z-md">
+                  <div>
+                    <span class="block text-[10px] uppercase tracking-widest text-med-sand/80">Tarif unique</span>
+                    <span class="font-serif text-3xl font-bold text-med-lemon">
+                      0,00 € (Gratuit)
+                    </span>
+                  </div>
+
+                  <button 
+                    type="button" 
+                    id="card-add-to-cart-btn"
+                    class="px-7 py-3.5 rounded-xl font-bold text-sm bg-med-lemon hover:bg-yellow-300 text-med-deep shadow-lg transition-all active:scale-95 flex items-center gap-2">
+                    <span>Réserver mon Disato Pass</span>
+                    <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+            <!-- ================= FACE ARRIÈRE (VERSO : PROGRAMME 13H - 19H) ================= -->
+            <div class="card-face card-face-back p-6 sm:p-8 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between gap-3 pb-4 border-b border-med-deep/15">
+                  <div>
+                    <span class="text-[11px] font-bold uppercase tracking-[0.2em] text-med-terracotta block">Programme Officiel</span>
+                    <h3 class="font-serif text-2xl font-bold text-med-deep">Maison Mère • 13h00 à 19h00</h3>
+                  </div>
+                  <button 
+                    type="button" 
+                    id="flip-to-front-btn"
+                    aria-label="Revenir à l'avant de la carte Disato Pass"
+                    class="px-3.5 py-2 rounded-xl text-xs font-bold bg-med-deep text-med-limestone hover:bg-med-sea transition-colors">
+                    ← Retour au Pass
+                  </button>
+                </div>
+
+                <!-- Chronologie détaillée de 13h00 à 19h00 -->
+                <ul class="mt-5 space-y-3.5 text-xs sm:text-sm text-med-deep">
+                  <li class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-med-deep/10 shadow-sm">
+                    <span class="px-2 py-0.5 rounded-md bg-med-sea/15 text-med-sea font-bold shrink-0">13h00</span>
+                    <div>
+                      <strong class="block font-bold">Ouverture des portes du Pop-Up Store</strong>
+                      <span class="text-med-deep/75">Accueil chaleureux, découverte de la capsule été et première sélection de pièces en lin et mailles légères.</span>
+                    </div>
+                  </li>
+
+                  <li class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-med-deep/10 shadow-sm">
+                    <span class="px-2 py-0.5 rounded-md bg-med-lemon/40 text-med-deep font-bold shrink-0">15h00</span>
+                    <div>
+                      <strong class="block font-bold">Atelier Essayages & Conseils Style</strong>
+                      <span class="text-med-deep/75">Accompagnement personnalisé par l'équipe de la marque et dégustation de citronnades siciliennes.</span>
+                    </div>
+                  </li>
+
+                  <li class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-med-deep/10 shadow-sm">
+                    <span class="px-2 py-0.5 rounded-md bg-med-terracotta/15 text-med-terracotta font-bold shrink-0">17h30</span>
+                    <div>
+                      <strong class="block font-bold">Apéritif Musical & Rencontre Créative</strong>
+                      <span class="text-med-deep/75">Ambiance sonore ensoleillée dans la cour de Maison Mère et échanges privilégiés avec les fondateurs.</span>
+                    </div>
+                  </li>
+
+                  <li class="flex items-start gap-3 p-3.5 rounded-xl bg-white border border-med-deep/10 shadow-sm">
+                    <span class="px-2 py-0.5 rounded-md bg-med-deep/10 text-med-deep font-bold shrink-0">19h00</span>
+                    <div>
+                      <strong class="block font-bold">Clôture de l'événement</strong>
+                      <span class="text-med-deep/75">Fin de la journée éphémère à Marseille. Merci d'avoir partagé cette belle énergie méditerranéenne !</span>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="pt-4 border-t border-med-deep/15 flex items-center justify-between gap-3">
+                <span class="text-xs font-medium text-med-deep/75">Maison Mère — 13001 Marseille</span>
+                <button 
+                  type="button" 
+                  id="back-add-to-cart-btn"
+                  class="px-5 py-2.5 rounded-xl font-bold text-xs bg-med-terracotta hover:bg-orange-700 text-white shadow transition-colors">
+                  Réserver mon Disato Pass gratuit
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <p class="text-xs font-semibold text-med-limestone bg-med-deep/80 backdrop-blur-md px-5 py-2.5 rounded-full border border-white/15 shadow-xl mt-6 text-center flex items-center justify-center gap-2">
+        <svg class="w-4 h-4 text-med-lemon shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+        </svg>
+        <span>Survolez la carte pour l'incliner en 3D ou cliquez sur « Infos & Programme » pour retourner la carte.</span>
+      </p>
+    </section>
+
+    <!-- SECTION ENGAGEMENTS & INFOS -->
+    <section id="engagements" aria-labelledby="infos-heading" class="py-14 px-4 sm:px-6 lg:px-8 bg-med-deep/95 backdrop-blur-lg text-med-limestone border-t-4 border-med-lemon">
+      <div class="max-w-6xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-10">
+          <span class="text-xs font-bold uppercase tracking-[0.2em] text-med-lemon">Marseille • Sicile • Indépendant</span>
+          <h2 id="infos-heading" class="font-serif text-3xl font-bold text-white mt-1">Informations Pratiques</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-serif text-lg font-bold text-med-lemon mb-1.5">Lieu : Maison Mère</h3>
+            <p class="text-xs text-med-sand/85 leading-relaxed">
+              Situé au cœur de Marseille (13001), facilement accessible en transports en commun et adapté à tous les visiteurs.
+            </p>
+          </article>
+
+          <article class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-serif text-lg font-bold text-med-lemon mb-1.5">E-Billet QR Code</h3>
+            <p class="text-xs text-med-sand/85 leading-relaxed">
+              Votre Disato Pass est généré instantanément avec un QR Code unique pour un passage fluide à l'entrée.
+            </p>
+          </article>
+
+          <article class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-serif text-lg font-bold text-med-lemon mb-1.5">Conformité RGPD</h3>
+            <p class="text-xs text-med-sand/85 leading-relaxed">
+              Vos informations sont strictement réservées à l'émission de votre titre d'accès et protégées selon les normes européennes.
+            </p>
+          </article>
+
+          <article class="p-5 rounded-2xl bg-white/5 border border-white/10">
+            <h3 class="font-serif text-lg font-bold text-med-lemon mb-1.5">Mode Indépendante</h3>
+            <p class="text-xs text-med-sand/85 leading-relaxed">
+              Collections pensées entre Marseille et la Sicile, valorisant les matières nobles et le savoir-faire textile.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       PIED DE PAGE LÉGAL
+       ===================================================================== -->
+  <footer class="bg-med-deep border-t border-white/15 py-8 px-4 sm:px-6 lg:px-8 text-xs text-med-sand/80">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <div class="text-center md:text-left">
+        <p class="font-bold text-white">© 2027 Maison Disato — Marque de Vêtement Indépendante • Pop-Up Store Maison Mère, Marseille</p>
+        <p class="mt-1">Conformément à l'article L221-28 du Code de la consommation, les billets datés au 19 juin 2027 ne font pas l'objet d'un droit de rétractation.</p>
+      </div>
+      <nav aria-label="Informations légales" class="flex flex-wrap justify-center gap-5 font-semibold">
+        <button type="button" data-legal="mentions" class="legal-link hover:text-med-lemon underline underline-offset-4">Mentions légales</button>
+        <button type="button" data-legal="cgv" class="legal-link hover:text-med-lemon underline underline-offset-4">CGV</button>
+        <button type="button" data-legal="rgpd" class="legal-link hover:text-med-lemon underline underline-offset-4">Politique de confidentialité</button>
+        <button type="button" id="reopen-cookie-banner" class="hover:text-med-lemon underline underline-offset-4">Gestion des cookies</button>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- =====================================================================
+       TIROIR LATÉRAL : PANIER / TUNNEL DE RÉSERVATION
+       ===================================================================== -->
+  <div id="cart-drawer-backdrop" class="fixed inset-0 z-50 bg-med-deep/70 backdrop-blur-xs hidden transition-opacity" aria-hidden="true"></div>
+
+  <aside 
+    id="cart-drawer" 
+    role="dialog" 
+    aria-modal="true" 
+    aria-labelledby="cart-drawer-title"
+    class="fixed inset-y-0 right-0 z-50 w-full max-w-lg bg-med-limestone border-l-2 border-med-deep/15 shadow-2xl transform translate-x-full transition-transform duration-300 flex flex-col">
+    
+    <div class="sicilian-border-tile w-full shrink-0" aria-hidden="true"></div>
+
+    <!-- En-tête Tiroir -->
+    <div class="px-6 py-5 border-b border-med-deep/10 flex items-center justify-between bg-white">
+      <div>
+        <h2 id="cart-drawer-title" class="font-serif text-2xl font-bold text-med-deep">Votre Réservation</h2>
+        <p class="text-xs text-med-deep/70">Pop-Up Store Maison Disato • 19 Juin 2027 (13h-19h)</p>
+      </div>
+      <button 
+        type="button" 
+        id="close-cart-btn" 
+        aria-label="Fermer le panneau de réservation"
+        class="p-2 rounded-xl bg-med-sand hover:bg-med-deep hover:text-white text-med-deep transition-colors">
+        <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Corps du Panier -->
+    <div class="flex-1 overflow-y-auto p-6 space-y-6">
+      <div id="cart-items-container" class="space-y-3"></div>
+
+      <div id="cart-empty-msg" class="text-center py-12 px-4 rounded-2xl bg-white border border-med-deep/10">
+        <p class="font-serif text-xl font-bold text-med-deep">Aucun Disato Pass dans votre panier</p>
+        <p class="text-xs text-med-deep/70 mt-1">Cliquez sur « Réserver mon Disato Pass » sur la carte 3D pour continuer.</p>
+      </div>
+
+      <!-- Formulaire de réservation (Prénom, Nom, Email) -->
+      <form id="checkout-form" class="hidden space-y-5 pt-2" novalidate>
+        
+        <!-- Créneau horaire -->
+        <div class="p-4 rounded-2xl bg-white border border-med-deep/15">
+          <label for="arrival-slot" class="block text-xs font-bold text-med-deep mb-1.5">
+            Créneau d'arrivée estimé (13h00 – 19h00) :
+          </label>
+          <select id="arrival-slot" class="w-full px-3.5 py-2.5 rounded-xl bg-med-limestone border border-med-deep/20 text-xs font-semibold text-med-deep focus:border-med-terracotta focus:outline-none">
+            <option value="13h00 – 15h00 (Ouverture & Premières pièces)" selected>13h00 – 15h00 (Ouverture & Premières pièces)</option>
+            <option value="15h00 – 17h00 (Atelier & Essayages)">15h00 – 17h00 (Atelier & Essayages)</option>
+            <option value="17h00 – 19h00 (Apéro & Clôture)">17h00 – 19h00 (Apéro & Clôture)</option>
+          </select>
+        </div>
+
+        <!-- Récapitulatif -->
+        <div class="p-4 rounded-2xl bg-med-deep text-med-limestone flex justify-between items-center text-sm">
+          <span class="font-semibold">Total à payer :</span>
+          <span class="font-serif font-bold text-xl text-med-lemon">0,00 € (Gratuit)</span>
+        </div>
+
+        <!-- Coordonnées -->
+        <fieldset class="space-y-3.5 bg-white p-4 rounded-2xl border border-med-deep/15">
+          <legend class="font-serif font-bold text-lg text-med-deep px-1">Titulaire du Disato Pass</legend>
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div>
+              <label for="buyer-firstname" class="block text-xs font-semibold text-med-deep mb-1">Prénom <span class="text-med-terracotta" aria-hidden="true">*</span></label>
+              <input type="text" id="buyer-firstname" name="firstname" required autocomplete="given-name" placeholder="Lucia"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-med-limestone border border-med-deep/20 text-sm text-med-deep focus:border-med-terracotta focus:outline-none">
+              <p id="err-firstname" class="hidden text-xs text-med-terracotta font-semibold mt-1" role="alert"></p>
+            </div>
+            <div>
+              <label for="buyer-lastname" class="block text-xs font-semibold text-med-deep mb-1">Nom <span class="text-med-terracotta" aria-hidden="true">*</span></label>
+              <input type="text" id="buyer-lastname" name="lastname" required autocomplete="family-name" placeholder="Bellini"
+                class="w-full px-3.5 py-2.5 rounded-xl bg-med-limestone border border-med-deep/20 text-sm text-med-deep focus:border-med-terracotta focus:outline-none">
+              <p id="err-lastname" class="hidden text-xs text-med-terracotta font-semibold mt-1" role="alert"></p>
+            </div>
+          </div>
+
+          <div>
+            <label for="buyer-email" class="block text-xs font-semibold text-med-deep mb-1">Adresse e-mail <span class="text-med-terracotta" aria-hidden="true">*</span></label>
+            <input type="email" id="buyer-email" name="email" required autocomplete="email" placeholder="lucia.bellini@exemple.fr"
+              class="w-full px-3.5 py-2.5 rounded-xl bg-med-limestone border border-med-deep/20 text-sm text-med-deep focus:border-med-terracotta focus:outline-none">
+            <p id="err-email" class="hidden text-xs text-med-terracotta font-semibold mt-1" role="alert"></p>
+          </div>
+        </fieldset>
+
+        <!-- Consentements -->
+        <div class="space-y-2.5">
+          <div class="flex items-start gap-2.5">
+            <input type="checkbox" id="consent-cgv" required
+              class="mt-1 w-4 h-4 rounded border-med-deep/30 text-med-deep focus:ring-med-terracotta">
+            <label for="consent-cgv" class="text-xs text-med-deep/85 leading-relaxed">
+              J'accepte les <button type="button" data-legal="cgv" class="legal-link text-med-terracotta font-semibold underline">Conditions Générales de Vente</button> et je note que le titre d'accès daté au 19 juin 2027 ne bénéficie pas du droit de rétractation (Art. L221-28). <span class="text-med-terracotta font-bold">*</span>
+            </label>
+          </div>
+          <p id="err-cgv" class="hidden text-xs text-med-terracotta font-semibold" role="alert"></p>
+
+          <div class="flex items-start gap-2.5">
+            <input type="checkbox" id="consent-newsletter"
+              class="mt-1 w-4 h-4 rounded border-med-deep/30 text-med-deep focus:ring-med-terracotta">
+            <label for="consent-newsletter" class="text-xs text-med-deep/70 leading-relaxed">
+              (Optionnel) Recevoir les actualités et futures collections de Maison Disato (RGPD).
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" id="submit-order-btn"
+          class="w-full py-3.5 px-6 rounded-xl font-bold text-sm bg-med-deep hover:bg-med-sea text-med-lemon shadow-lg transition-all active:scale-[0.99] flex items-center justify-center gap-2">
+          <span>Générer mon E-Billet Disato Pass</span>
+          <svg class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+          </svg>
+        </button>
+      </form>
+    </div>
+  </aside>
+
+  <!-- =====================================================================
+       MODALE : E-BILLET ÉLECTRONIQUE STYLÉ AVEC QR CODE ET IMPRESSION
+       ===================================================================== -->
+  <div id="ticket-modal" role="dialog" aria-modal="true" aria-labelledby="ticket-modal-title"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-med-deep/80 backdrop-blur-sm overflow-y-auto">
+    <div class="relative w-full max-w-2xl bg-med-limestone border-2 border-med-gold rounded-3xl shadow-2xl overflow-hidden my-8">
+      
+      <div class="sicilian-border-tile w-full" aria-hidden="true"></div>
+
+      <div class="px-6 py-4 bg-med-deep text-med-limestone flex items-center justify-between no-print">
+        <div>
+          <h2 id="ticket-modal-title" class="font-serif text-xl sm:text-2xl font-bold text-med-lemon">Votre E-Billet Disato Pass</h2>
+          <p class="text-xs text-med-sand/85">Présentez ce QR Code à l'accueil de Maison Mère le 19 juin 2027</p>
+        </div>
+        <button type="button" id="close-ticket-modal" aria-label="Fermer la fenêtre du E-Billet"
+          class="p-2 rounded-xl bg-white/10 hover:bg-white/20 text-white transition-colors">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+
+      <div id="generated-tickets-list" class="p-6 space-y-6 max-h-[70vh] overflow-y-auto">
+        <!-- Billets générés injectés ici -->
+      </div>
+
+      <div class="px-6 py-4 bg-med-sand border-t border-med-deep/15 flex flex-wrap items-center justify-between gap-3 no-print">
+        <p class="text-xs text-med-deep/75">Sauvegardé dans « Mes Disato Pass »</p>
+        <div class="flex items-center gap-3">
+          <button type="button" onclick="window.print()" class="px-4 py-2 rounded-xl bg-white hover:bg-med-limestone text-med-deep border border-med-deep/20 text-xs font-bold transition-colors">
+            Imprimer / PDF
+          </button>
+          <button type="button" id="done-ticket-modal" class="px-5 py-2 rounded-xl bg-med-deep hover:bg-med-sea text-med-lemon text-xs font-bold transition-colors">
+            Terminer
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       MODALE INFORMATIONS LÉGALES
+       ===================================================================== -->
+  <div id="legal-modal" role="dialog" aria-modal="true" aria-labelledby="legal-modal-title"
+    class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-med-deep/75 backdrop-blur-xs">
+    <div class="w-full max-w-xl bg-med-limestone border-2 border-med-deep/20 rounded-2xl shadow-2xl overflow-hidden">
+      <div class="px-6 py-4 bg-med-deep text-white flex items-center justify-between">
+        <h2 id="legal-modal-title" class="font-serif text-xl font-bold text-med-lemon">Informations Légales</h2>
+        <button type="button" id="close-legal-modal" aria-label="Fermer les informations légales" class="p-1.5 rounded-lg bg-white/10 hover:bg-white/20 text-white">
+          <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="legal-modal-content" class="p-6 text-sm text-med-deep space-y-3 max-h-[60vh] overflow-y-auto leading-relaxed"></div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       BANDEAU DE CONSENTEMENT RGPD / COOKIES
+       ===================================================================== -->
+  <section 
+    id="cookie-banner" 
+    role="region" 
+    aria-label="Gestion du consentement aux cookies"
+    class="fixed bottom-4 left-4 right-4 z-50 max-w-5xl mx-auto p-5 rounded-2xl bg-med-deep text-med-limestone border-2 border-med-gold shadow-2xl hidden">
+    <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-5">
+      <div class="space-y-1">
+        <h2 class="font-serif font-bold text-med-lemon text-lg">
+          Respect de votre vie privée (RGPD)
+        </h2>
+        <p class="text-xs text-med-sand/90 leading-relaxed">
+          Maison Disato utilise des cookies nécessaires au fonctionnement de votre E-Billet et, avec votre accord, des traceurs d'analyse anonymisés.
+        </p>
+      </div>
+      <div class="flex flex-wrap items-center gap-2.5 shrink-0 w-full lg:w-auto justify-end">
+        <button type="button" id="cookie-refuse-btn"
+          class="px-4 py-2.5 rounded-xl text-xs font-semibold bg-white/10 hover:bg-white/20 text-white border border-white/20 transition-colors">
+          Tout refuser
+        </button>
+        <button type="button" id="cookie-essential-btn"
+          class="px-4 py-2.5 rounded-xl text-xs font-semibold bg-med-sea hover:bg-med-azure text-white border border-white/20 transition-colors">
+          Essentiels uniquement
+        </button>
+        <button type="button" id="cookie-accept-btn"
+          class="px-5 py-2.5 rounded-xl text-xs font-bold bg-med-lemon hover:bg-yellow-300 text-med-deep shadow transition-all">
+          Tout accepter
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       LOGIQUE JAVASCRIPT : CARTE 3D, PANIER, QR CODE & E-BILLET
+       ===================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      const EVENT_INFO = {
+        title: 'POP-UP STORE — MAISON DISATO',
+        subtitle: 'Collection Été — Escapade Méditerranéenne & Sicile',
+        dateDisplay: 'Samedi 19 Juin 2027 • 13h00 – 19h00',
+        venue: 'Maison Mère',
+        city: 'Marseille (13001)'
+      };
+
+      const state = {
+        cart: [], // [{ quantity: 1 }]
+        tiltEnabled: !window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+        generatedTickets: []
+      };
+
+      try {
+        const saved = localStorage.getItem('maison_disato_passes_v2');
+        if (saved) {
+          state.generatedTickets = JSON.parse(saved);
+        }
+      } catch (e) { /* ignore */ }
+
+      const announceToScreenReader = (msg) => {
+        const el = document.getElementById('a11y-announcer');
+        if (el) {
+          el.textContent = '';
+          setTimeout(() => { el.textContent = msg; }, 50);
+        }
+      };
+
+      /* -------------------------------------------------------------------
+         MOTEUR 3D TILT & FLIP 180°
+         ------------------------------------------------------------------- */
+      const init3DCard = () => {
+        const scene = document.getElementById('disato-card-scene');
+        const wrapper = document.getElementById('disato-card-wrapper');
+        const glare = document.getElementById('disato-solar-glare');
+
+        scene.addEventListener('mousemove', (e) => {
+          if (!state.tiltEnabled || scene.classList.contains('is-flipped')) {
+            wrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
+            return;
+          }
+
+          const rect = scene.getBoundingClientRect();
+          const x = e.clientX - rect.left;
+          const y = e.clientY - rect.top;
+
+          const centerX = rect.width / 2;
+          const centerY = rect.height / 2;
+
+          const rotateX = ((y - centerY) / centerY) * -10;
+          const rotateY = ((x - centerX) / centerX) * 10;
+
+          wrapper.style.transform = `rotateX(${rotateX.toFixed(2)}deg) rotateY(${rotateY.toFixed(2)}deg) scale3d(1.015, 1.015, 1.015)`;
+
+          if (glare) {
+            glare.style.setProperty('--glare-x', `${(x / rect.width) * 100}%`);
+            glare.style.setProperty('--glare-y', `${(y / rect.height) * 100}%`);
+          }
+        });
+
+        scene.addEventListener('mouseleave', () => {
+          wrapper.style.transform = 'rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)';
+        });
+
+        // Flip vers l'arrière (Programme 13h - 19h)
+        document.getElementById('flip-to-back-btn').addEventListener('click', () => {
+          scene.classList.add('is-flipped');
+          wrapper.style.transform = 'rotateX(0deg) rotateY(0deg)';
+          announceToScreenReader('Carte retournée : affichage du programme complet de 13h à 19h.');
+        });
+
+        // Flip vers l'avant
+        document.getElementById('flip-to-front-btn').addEventListener('click', () => {
+          scene.classList.remove('is-flipped');
+          announceToScreenReader('Retour à la face avant du Disato Pass.');
+        });
+      };
+
+      /* -------------------------------------------------------------------
+         PANIER & TUNNEL
+         ------------------------------------------------------------------- */
+      const addToCart = () => {
+        if (state.cart.length === 0) {
+          state.cart.push({ quantity: 1 });
+        } else {
+          if (state.cart[0].quantity < 6) state.cart[0].quantity += 1;
+        }
+        updateCartUI();
+        openCartDrawer();
+        announceToScreenReader('Disato Pass gratuit ajouté à votre réservation.');
+      };
+
+      const updateCartUI = () => {
+        const badge = document.getElementById('cart-count-badge');
+        const container = document.getElementById('cart-items-container');
+        const emptyMsg = document.getElementById('cart-empty-msg');
+        const form = document.getElementById('checkout-form');
+
+        const totalCount = state.cart.reduce((acc, item) => acc + item.quantity, 0);
+        badge.textContent = totalCount;
+
+        if (state.cart.length === 0) {
+          container.innerHTML = '';
+          emptyMsg.classList.remove('hidden');
+          form.classList.add('hidden');
+          return;
+        }
+
+        emptyMsg.classList.add('hidden');
+        form.classList.remove('hidden');
+
+        container.innerHTML = state.cart.map((item, idx) => `
+          <div class="p-4 rounded-2xl bg-white border border-med-deep/15 flex items-center justify-between gap-3 shadow-xs">
+            <div>
+              <p class="font-serif font-bold text-base text-med-deep">Disato Pass • Entrée Gratuite</p>
+              <p class="text-xs text-med-terracotta font-semibold">0,00 € (Accès Pop-Up Store)</p>
+            </div>
+            <div class="flex items-center gap-2 shrink-0">
+              <button type="button" data-delta="-1" aria-label="Retirer un pass"
+                class="qty-btn w-8 h-8 rounded-lg bg-med-sand hover:bg-med-deep hover:text-white text-med-deep font-bold flex items-center justify-center">
+                −
+              </button>
+              <span class="w-6 text-center text-sm font-bold text-med-deep">${item.quantity}</span>
+              <button type="button" data-delta="1" aria-label="Ajouter un pass"
+                class="qty-btn w-8 h-8 rounded-lg bg-med-sand hover:bg-med-deep hover:text-white text-med-deep font-bold flex items-center justify-center">
+                +
+              </button>
+            </div>
+          </div>
+        `).join('');
+      };
+
+      /* -------------------------------------------------------------------
+         GÉNÉRATION QR CODE & E-BILLET
+         ------------------------------------------------------------------- */
+      const generateQRSVG = (code) => {
+        const size = 21;
+        let hash = 0;
+        for (let i = 0; i < code.length; i++) {
+          hash = ((hash << 5) - hash) + code.charCodeAt(i);
+          hash |= 0;
+        }
+
+        const isFinder = (r, c) => (r < 7 && c < 7) || (r < 7 && c >= size - 7) || (r >= size - 7 && c < 7);
+        const isFinderDark = (r, c) => {
+          const lr = r >= size - 7 ? r - (size - 7) : r;
+          const lc = c >= size - 7 ? c - (size - 7) : c;
+          return lr === 0 || lr === 6 || lc === 0 || lc === 6 || (lr >= 2 && lr <= 4 && lc >= 2 && lc <= 4);
+        };
+
+        let rects = '';
+        for (let r = 0; r < size; r++) {
+          for (let c = 0; c < size; c++) {
+            const dark = isFinder(r, c) ? isFinderDark(r, c) : Math.abs(Math.sin(hash + r * 29 + c * 19)) > 0.47;
+            if (dark) {
+              rects += `<rect x="${c * 4 + 4}" y="${r * 4 + 4}" width="4" height="4" fill="#0A2E46"/>`;
+            }
+          }
+        }
+
+        return `
+          <svg viewBox="0 0 92 92" class="w-24 h-24 rounded-xl bg-white p-1.5 border border-med-deep/15 shadow-sm shrink-0" role="img" aria-label="QR Code Disato Pass ${code}">
+            <rect width="92" height="92" fill="#ffffff"/>
+            ${rects}
+          </svg>
+        `;
+      };
+
+      const renderTicketsModal = (tickets) => {
+        const list = document.getElementById('generated-tickets-list');
+        const modal = document.getElementById('ticket-modal');
+
+        list.innerHTML = tickets.map(t => `
+          <article class="rounded-2xl bg-white border-2 border-med-deep/20 shadow-lg overflow-hidden">
+            <div class="sicilian-border-tile w-full" aria-hidden="true"></div>
+            <div class="p-5 sm:p-6">
+              <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4">
+                <div>
+                  <span class="inline-block px-2.5 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-widest bg-med-deep text-med-lemon mb-2">
+                    Maison Disato • E-Billet Officiel
+                  </span>
+                  <h3 class="font-serif text-xl sm:text-2xl font-bold text-med-deep">${EVENT_INFO.title}</h3>
+                  <p class="text-xs font-semibold text-med-sea mt-0.5">${EVENT_INFO.dateDisplay}</p>
+                  <p class="text-xs text-med-deep/80">Lieu : <strong>${EVENT_INFO.venue}, ${EVENT_INFO.city}</strong></p>
+                  <div class="mt-2 inline-flex flex-wrap items-center gap-2 text-xs">
+                    <span class="px-2.5 py-1 rounded-lg bg-med-sand font-bold text-med-deep">Entrée Gratuite</span>
+                    <span class="px-2.5 py-1 rounded-lg bg-med-lemon/30 font-semibold text-med-deep">Créneau : ${t.slot}</span>
+                  </div>
+                </div>
+                <div class="self-start sm:self-center">
+                  ${generateQRSVG(t.serial)}
+                </div>
+              </div>
+
+              <div class="ticket-perforation pt-4 flex flex-wrap items-center justify-between gap-2 text-xs">
+                <div>
+                  <span class="text-med-deep/70">Titulaire :</span>
+                  <strong class="text-med-deep uppercase">${t.holderName}</strong>
+                </div>
+                <div class="font-mono font-bold text-med-deep bg-med-limestone px-3 py-1 rounded-lg border border-med-deep/15">
+                  N° ${t.serial}
+                </div>
+              </div>
+            </div>
+          </article>
+        `).join('');
+
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      };
+
+      const handleOrderSubmit = (e) => {
+        e.preventDefault();
+
+        const firstInput = document.getElementById('buyer-firstname');
+        const lastInput = document.getElementById('buyer-lastname');
+        const emailInput = document.getElementById('buyer-email');
+        const cgvInput = document.getElementById('consent-cgv');
+
+        const errFirst = document.getElementById('err-firstname');
+        const errLast = document.getElementById('err-lastname');
+        const errEmail = document.getElementById('err-email');
+        const errCgv = document.getElementById('err-cgv');
+
+        [errFirst, errLast, errEmail, errCgv].forEach(el => { el.classList.add('hidden'); el.textContent = ''; });
+        [firstInput, lastInput, emailInput].forEach(el => el.removeAttribute('aria-invalid'));
+
+        let valid = true;
+
+        if (!firstInput.value.trim()) {
+          errFirst.textContent = 'Veuillez renseigner votre prénom.';
+          errFirst.classList.remove('hidden');
+          firstInput.setAttribute('aria-invalid', 'true');
+          valid = false;
+        }
+        if (!lastInput.value.trim()) {
+          errLast.textContent = 'Veuillez renseigner votre nom.';
+          errLast.classList.remove('hidden');
+          lastInput.setAttribute('aria-invalid', 'true');
+          valid = false;
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(emailInput.value.trim())) {
+          errEmail.textContent = 'Veuillez saisir une adresse e-mail valide.';
+          errEmail.classList.remove('hidden');
+          emailInput.setAttribute('aria-invalid', 'true');
+          valid = false;
+        }
+        if (!cgvInput.checked) {
+          errCgv.textContent = 'Veuillez accepter les CGV pour obtenir votre E-Billet.';
+          errCgv.classList.remove('hidden');
+          valid = false;
+        }
+
+        if (!valid) {
+          announceToScreenReader('Certains champs obligatoires sont invalides.');
+          return;
+        }
+
+        const holderName = `${firstInput.value.trim()} ${lastInput.value.trim()}`;
+        const slot = document.getElementById('arrival-slot').value;
+        const created = [];
+
+        state.cart.forEach(item => {
+          for (let i = 0; i < item.quantity; i++) {
+            const serial = `DISATO-27-${Math.random().toString(36).substring(2, 6).toUpperCase()}`;
+            created.push({
+              serial,
+              slot,
+              holderName
+            });
+          }
+        });
+
+        state.generatedTickets = [...created, ...state.generatedTickets];
+        try {
+          localStorage.setItem('maison_disato_passes_v2', JSON.stringify(state.generatedTickets));
+        } catch (err) { /* ignore */ }
+
+        updateSavedBadge();
+        state.cart = [];
+        updateCartUI();
+        closeCartDrawer();
+        renderTicketsModal(created);
+        announceToScreenReader(`Votre E-Billet Disato Pass est généré avec succès.`);
+      };
+
+      const updateSavedBadge = () => {
+        const badge = document.getElementById('saved-tickets-badge');
+        if (state.generatedTickets.length > 0) {
+          badge.textContent = state.generatedTickets.length;
+          badge.classList.remove('hidden');
+        }
+      };
+
+      const openCartDrawer = () => {
+        document.getElementById('cart-drawer-backdrop').classList.remove('hidden');
+        document.getElementById('cart-drawer').classList.remove('translate-x-full');
+        document.getElementById('open-cart-btn').setAttribute('aria-expanded', 'true');
+        document.getElementById('close-cart-btn').focus();
+      };
+
+      const closeCartDrawer = () => {
+        document.getElementById('cart-drawer').classList.add('translate-x-full');
+        document.getElementById('cart-drawer-backdrop').classList.add('hidden');
+        document.getElementById('open-cart-btn').setAttribute('aria-expanded', 'false');
+      };
+
+      const initCookieBanner = () => {
+        const banner = document.getElementById('cookie-banner');
+        let consent = null;
+        try {
+          consent = localStorage.getItem('maison_disato_cookie_consent_v2');
+        } catch (e) { /* ignore */ }
+
+        if (!consent) banner.classList.remove('hidden');
+
+        const saveChoice = (choice) => {
+          try {
+            localStorage.setItem('maison_disato_cookie_consent_v2', JSON.stringify({ choice, date: new Date().toISOString() }));
+          } catch (e) { /* ignore */ }
+          banner.classList.add('hidden');
+          announceToScreenReader('Préférences cookies enregistrées.');
+        };
+
+        document.getElementById('cookie-accept-btn').addEventListener('click', () => saveChoice('all'));
+        document.getElementById('cookie-essential-btn').addEventListener('click', () => saveChoice('essential'));
+        document.getElementById('cookie-refuse-btn').addEventListener('click', () => saveChoice('refused'));
+        document.getElementById('reopen-cookie-banner').addEventListener('click', () => banner.classList.remove('hidden'));
+      };
+
+      const LEGAL_CONTENT = {
+        mentions: {
+          title: 'Mentions Légales — Maison Disato',
+          body: `<p><strong>Éditeur :</strong> Maison Disato, marque de vêtement indépendante.</p><p><strong>Lieu de l'événement :</strong> Maison Mère, 13001 Marseille, France.</p>`
+        },
+        cgv: {
+          title: 'Conditions Générales de Vente (CGV)',
+          body: `<p><strong>Article 1 — Objet :</strong> Réservation de l'E-Billet « Disato Pass » gratuit pour le Pop-Up Store du 19 juin 2027 (13h-19h) à Maison Mère, Marseille.</p><p><strong>Article 2 — Rétractation :</strong> Conformément à l'article L.221-28 12° du Code de la consommation, les billets datés ne bénéficient pas du droit de rétractation.</p>`
+        },
+        rgpd: {
+          title: 'Politique de Confidentialité (RGPD)',
+          body: `<p><strong>Données collectées :</strong> Nom, prénom et e-mail pour l'émission de votre E-Billet nominatif (Art. 6.1.b RGPD).</p>`
+        }
+      };
+
+      document.addEventListener('DOMContentLoaded', () => {
+        init3DCard();
+        updateSavedBadge();
+        initCookieBanner();
+
+        // Ajout au panier depuis la carte 3D
+        document.getElementById('card-add-to-cart-btn').addEventListener('click', addToCart);
+        document.getElementById('back-add-to-cart-btn').addEventListener('click', addToCart);
+
+        // Toggle 3D
+        const toggle3dBtn = document.getElementById('toggle-3d-btn');
+        toggle3dBtn.addEventListener('click', () => {
+          state.tiltEnabled = !state.tiltEnabled;
+          toggle3dBtn.setAttribute('aria-pressed', String(state.tiltEnabled));
+          document.getElementById('tilt-status-text').textContent = state.tiltEnabled ? 'Actif' : 'Désactivé';
+          document.getElementById('tilt-status-dot').className = state.tiltEnabled ? 'w-2 h-2 rounded-full bg-emerald-400' : 'w-2 h-2 rounded-full bg-slate-400';
+        });
+
+        // Panier
+        document.getElementById('open-cart-btn').addEventListener('click', openCartDrawer);
+        document.getElementById('close-cart-btn').addEventListener('click', closeCartDrawer);
+        document.getElementById('cart-drawer-backdrop').addEventListener('click', closeCartDrawer);
+
+        document.getElementById('cart-items-container').addEventListener('click', (e) => {
+          const btn = e.target.closest('.qty-btn');
+          if (btn) {
+            state.cart[0].quantity += Number(btn.dataset.delta);
+            if (state.cart[0].quantity <= 0) state.cart = [];
+            updateCartUI();
+          }
+        });
+
+        document.getElementById('checkout-form').addEventListener('submit', handleOrderSubmit);
+
+        // Modale E-Billet
+        const closeTicketModal = () => {
+          const modal = document.getElementById('ticket-modal');
+          modal.classList.add('hidden');
+          modal.classList.remove('flex');
+        };
+        document.getElementById('close-ticket-modal').addEventListener('click', closeTicketModal);
+        document.getElementById('done-ticket-modal').addEventListener('click', closeTicketModal);
+
+        document.getElementById('btn-open-tickets-modal').addEventListener('click', () => {
+          if (state.generatedTickets.length === 0) {
+            announceToScreenReader('Aucun Disato Pass enregistré pour le moment.');
+            openCartDrawer();
+            return;
+          }
+          renderTicketsModal(state.generatedTickets);
+        });
+
+        // Modale Légal
+        const legalModal = document.getElementById('legal-modal');
+        document.body.addEventListener('click', (e) => {
+          const link = e.target.closest('.legal-link');
+          if (link && LEGAL_CONTENT[link.dataset.legal]) {
+            const info = LEGAL_CONTENT[link.dataset.legal];
+            document.getElementById('legal-modal-title').textContent = info.title;
+            document.getElementById('legal-modal-content').innerHTML = info.body;
+            legalModal.classList.remove('hidden');
+            legalModal.classList.add('flex');
+          }
+        });
+        document.getElementById('close-legal-modal').addEventListener('click', () => {
+          legalModal.classList.add('hidden');
+          legalModal.classList.remove('flex');
+        });
+
+        document.addEventListener('keydown', (e) => {
+          if (e.key === 'Escape') {
+            closeCartDrawer();
+            closeTicketModal();
+            legalModal.classList.add('hidden');
+            legalModal.classList.remove('flex');
+          }
+        });
+      });
+    })();
+  </script>
+</body>
+</html>
